@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/pc.css" id="template"/>
+</head>
+<body>
+<select name="plantilla">
+    <option value="">Selecciona una plantilla</option>
+    <option value="pc">Plantilla para pc</option>
+    <option value="pchd">Plantilla alta definicion</option>
+    <option value="movil">Plantilla para telefono movil</option>
+    <option value="tablet">Plantilla para tablet</option>
+</select>
+<hr/>
+<div id="contenedor">
+    <header>
+        <div id="titulo">
+            <div id="logo">
+
+            </div>
+            <h1>titulo de la web</h1>
+
+            <h2>eslogan de la web</h2>
+        </div>
+        <div style="clear:both"></div>
+        <nav>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+        <div style="clear:both"></div>
+    </header>
+
+    <section>
+        <div id="contieneblog">
+        <div id="articulos">
+            <article contenteditable="true">
+                <h3>Titulo del articulo</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at, dicta dignissimos doloremque,
+                    eum impedit inventore laudantium libero minus necessitatibus quam quibusdam, reprehenderit sed. Eius
+                    error ratione similique veniam voluptates.</p>
+
+                <div class="imagenarticuloblog" id="imgblog1"></div>
+            </article>
+            <article contenteditable="true">
+                <h3>Titulo del articulo</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at, dicta dignissimos doloremque,
+                    eum impedit inventore laudantium libero minus necessitatibus quam quibusdam, reprehenderit sed. Eius
+                    error ratione similique veniam voluptates.</p>
+
+                <div class="imagenarticuloblog" id="imgblog2"></div>
+            </article>
+            <article contenteditable="true">
+                <h3>Titulo del articulo</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at, dicta dignissimos doloremque,
+                    eum impedit inventore laudantium libero minus necessitatibus quam quibusdam, reprehenderit sed. Eius
+                    error ratione similique veniam voluptates.</p>
+
+                <div class="imagenarticuloblog" id="imgblog3"></div>
+            </article>
+
+        </div>
+
+        <aside>
+            <div id="archivo">
+                <h3>archivo</h3>
+                <ul>
+                    <li><a href="">Diciembre 2012</a></li>
+                    <li><a href="">Noviembre 2012</a></li>
+                    <li><a href="">Octubre 2012</a></li>
+                    <li><a href="">Septiembre 2012</a></li>
+                    <li><a href="">Agosto 2012</a></li>
+                </ul>
+            </div>
+
+
+            <div id="sobre">
+                <h3>sobre este blog </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error et eum ex inventore ipsum iusto
+                    magnam
+                    minima obcaecati optio pariatur, perspiciatis placeat porro, praesentium repudiandae sint suscipit
+                    voluptas voluptatum. Amet.</p>
+
+            </div>
+        </aside>
+            <div style="clear:both"></div>
+        </div>
+
+    </section>
+    <div style="clear:both"></div>
+    <footer>
+        <h6>(c) Seryo</h6>
+    </footer>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script>
+    $(document).on("ready", function () {
+        $("select").change(function () {
+
+            // .text() contenido de la etiqueta
+            // .val(); value del control
+            // .attr() 
+            var plantilla = $(this).val(); // cogemos el value del option
+            console.log(plantilla);
+            $("#template").attr("href", "css/" + plantilla + ".css");
+
+        });
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
