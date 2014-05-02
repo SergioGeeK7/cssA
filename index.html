@@ -4,7 +4,24 @@
     <title></title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
     <link rel="stylesheet" href="css/base.css"/>
-    <link rel="stylesheet" href="css/pc.css" id="template"/>
+
+    <!--
+    all // todo tipo de medio
+    handheld // solo medios sostenidos con la mano
+    aural // lectura y escritura personalizada
+    print //medio impresos
+    tv // lala
+    -->
+
+
+    <link rel="stylesheet" href="css/movil.css" media="handheld and (max-width: 600px) and (min-width: 1px) "/>
+
+
+
+    <link rel="stylesheet" href="css/movil.css" media="screen and (max-width: 600px) and (min-width: 1px) "/>
+    <link rel="stylesheet" href="css/tablet.css" media="screen and(max-width: 680px) and (min-width: 601px)"/>
+    <link rel="stylesheet" href="css/pc.css" media="screen and(max-width: 1200px) and (min-width: 681px)"/>
+    <link rel="stylesheet" href="css/pchd.css" media="screen and(max-width: 3600px) and (min-width: 1201px)"/>
 </head>
 <body>
 <select name="plantilla">
@@ -22,15 +39,16 @@
 
             </div>
             <h1>titulo de la web</h1>
+
             <h2>eslogan de la web</h2>
         </div>
         <div style="clear:both"></div>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="blog.html">Blog</a> </li>
-                <li><a href="productos.html">Productos</a> </li>
-                <li><a href="contacto.html">Contacto</a> </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
         <div style="clear:both"></div>
@@ -39,20 +57,24 @@
     <section>
 
         <div id="banner" contenteditable="true">
-            <div id="contienebanner" >
-            <h3>Titulo del banner</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad cupiditate delectus dicta earum esse est
-                facilis, id in incidunt ipsa ipsam laborum modi molestias nihil repudiandae, rerum soluta veniam?</p>
-             </div>
+            <div id="contienebanner">
+                <h3>Titulo del banner</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad cupiditate delectus dicta earum esse
+                    est
+                    facilis, id in incidunt ipsa ipsam laborum modi molestias nihil repudiandae, rerum soluta
+                    veniam?</p>
+            </div>
         </div>
         <article contenteditable="true">
             <div class="content-article" id="articulo1">
-            <div class="imagendestacado" id="img1"></div>
-            <h3>titulo del destacado</h3>
+                <div class="imagendestacado" id="img1"></div>
+                <h3>titulo del destacado</h3>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda dicta eveniet iste libero modi
-                nemo nulla, officia possimus quaerat quas qui, reiciendis rem, sequi similique sint tempora temporibus
-                voluptates!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda dicta eveniet iste libero modi
+                    nemo nulla, officia possimus quaerat quas qui, reiciendis rem, sequi similique sint tempora
+                    temporibus
+                    voluptates!</p>
             </div>
         </article>
         <article contenteditable="true">
@@ -61,7 +83,8 @@
                 <h3>titulo del destacado</h3>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda dicta eveniet iste libero modi
-                    nemo nulla, officia possimus quaerat quas qui, reiciendis rem, sequi similique sint tempora temporibus
+                    nemo nulla, officia possimus quaerat quas qui, reiciendis rem, sequi similique sint tempora
+                    temporibus
                     voluptates!</p>
             </div>
         </article>
@@ -71,7 +94,8 @@
                 <h3>titulo del destacado</h3>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda dicta eveniet iste libero modi
-                    nemo nulla, officia possimus quaerat quas qui, reiciendis rem, sequi similique sint tempora temporibus
+                    nemo nulla, officia possimus quaerat quas qui, reiciendis rem, sequi similique sint tempora
+                    temporibus
                     voluptates!</p>
             </div>
         </article>
@@ -84,16 +108,22 @@
 </div>
 <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script>
-    $(document).on("ready",function (){
-        $("select").change(function (){
+    $(document).on("ready", function () {
+        $("select").change(function () {
+            /*
+             // .text() contenido de la etiqueta
+             // .val(); value del control
+             // .attr()
+             var plantilla = $(this).val(); // cogemos el value del option
+             console.log(plantilla);
 
-            // .text() contenido de la etiqueta
-            // .val(); value del control
-            // .attr()
-            var plantilla = $(this).val(); // cogemos el value del option
-            console.log(plantilla);
-            $("#template").attr("href","css/"+plantilla+".css");
+             $("#template").attr("href","css/"+plantilla+".css");
 
+             if(window.innerWidth<=400 && (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i)))$("#template").attr("href","css/movil.css");
+             else if(window.innerWidth>=400 && (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPad/i)))$("#template").attr("href","css/tablet.css");
+             else if(window.innerWidth>=1200)$("#template").attr("href","css/pchd.css");
+             else $("#template").attr("href","css/pc.css");
+             */
         });
     });
 </script>

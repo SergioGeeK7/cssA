@@ -215,4 +215,29 @@ aside{
     height: 200px;
 }
 
+#contieneportafolio{
+    background: #ffffff;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
+}
 /*https://www.video2brain.com/mx/videos-49375.htm*/
+.artportafolio{
+    width: 50%;
+}
+.imagen{
+ background:gray;
+    width: 380px;
+    height: 200px;
+}
+
+.contieneportafoliointeior{
+    padding: 10px; /* padding interior para que todos se vallan de un lado a otro*/
+    /* se le da al articulo un 50% para que quepan de a dos*/
+
+}
+
+#porta1 .imagen,#porta2 .imagen,#porta3 .imagen,#porta4 .imagen,#porta5 .imagen,#porta6 .imagen,#porta7 .imagen{
+    background: url("../img/death-magnetic.jpg");
+    background-size: 100% 100%;
+}
